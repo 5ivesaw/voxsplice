@@ -2236,7 +2236,7 @@ def main() -> int:
     ui_index = ui_dir / "index.html"
     ui_index.write_text(html, encoding="utf-8")
 
-    out_dir = Path("/working_dir/c_33b7c1c84afa6d44/artifacts/file_generation/ttl=63d/output")
+    out_dir = REPO_ROOT / "dist"
     out_dir.mkdir(parents=True, exist_ok=True)
     shutil.copy2(ui_index, out_dir / "voxsplice_studio.html")
     print(f"Built {ui_index} ({ui_index.stat().st_size / 1024:.1f} KB) and copied to {out_dir / 'voxsplice_studio.html'}")
