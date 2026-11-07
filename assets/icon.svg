@@ -1,0 +1,28 @@
+<svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 512 512" width="512" height="512">
+  <defs>
+    <linearGradient id="bgGrad" x1="0%" y1="0%" x2="100%" y2="100%">
+      <stop offset="0%" stop-color="#1C1E24"/>
+      <stop offset="100%" stop-color="#111318"/>
+    </linearGradient>
+    <linearGradient id="waveBlue" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#4DA3FF"/>
+      <stop offset="100%" stop-color="#0A84FF"/>
+    </linearGradient>
+    <linearGradient id="waveEmerald" x1="0%" y1="0%" x2="0%" y2="100%">
+      <stop offset="0%" stop-color="#34D399"/>
+      <stop offset="100%" stop-color="#10B981"/>
+    </linearGradient>
+  </defs>
+  <rect x="24" y="24" width="464" height="464" rx="104" fill="url(#bgGrad)" stroke="#2E323B" stroke-width="6"/>
+  <rect x="92" y="216" width="22" height="80" rx="11" fill="url(#waveBlue)"/>
+  <rect x="132" y="164" width="22" height="184" rx="11" fill="url(#waveBlue)"/>
+  <rect x="172" y="124" width="22" height="264" rx="11" fill="url(#waveBlue)"/>
+  <rect x="212" y="180" width="22" height="152" rx="11" fill="url(#waveBlue)"/>
+  <line x1="256" y1="88" x2="256" y2="424" stroke="#F59E0B" stroke-width="5" stroke-dasharray="12 10" stroke-linecap="round"/>
+  <circle cx="256" cy="256" r="14" fill="#111318" stroke="#F59E0B" stroke-width="5"/>
+  <circle cx="256" cy="256" r="5" fill="#F59E0B"/>
+  <rect x="278" y="152" width="22" height="208" rx="11" fill="url(#waveEmerald)"/>
+  <rect x="318" y="116" width="22" height="280" rx="11" fill="url(#waveEmerald)"/>
+  <rect x="358" y="172" width="22" height="168" rx="11" fill="url(#waveEmerald)"/>
+  <rect x="398" y="212" width="22" height="88" rx="11" fill="url(#waveEmerald)"/>
+</svg>

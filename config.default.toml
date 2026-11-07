@@ -1,0 +1,40 @@
+# VoxSplice (`voxsplice` / `5mic` / `mimic`) Default Configuration
+# Automatically copied to ~/.config/voxsplice/config.toml (Linux) or %APPDATA%\VoxSplice\config.toml (Windows)
+
+sample_rate = 16000
+channels = 1
+audio_encoding = "ulaw_12k"       # Options: "ulaw_12k" (12 KB/s), "ulaw_8k" (8 KB/s), "pcm_16k" (32 KB/s)
+max_arena_mb = 200                # Ring buffer cap on SSD (`audio_arena.pcm`)
+max_variations_per_word = 5       # 5-slot deduplication cap per normalized phrase/word
+
+# Chain-Lock Coarticulation Slicer Thresholds
+seam_window_ms = 20.0             # ±10ms inspection window around word timestamp seam
+seam_rms_dip_threshold = 0.25     # T_rms: ratio of seam RMS to adjacent vowel nucleus RMS
+min_silence_gap_ms = 25.0         # T_gap: inter-word pause duration guaranteeing a clean cut
+max_bleed_chain_words = 3         # Maximum words locked in a single coarticulated n-gram
+min_word_confidence = 0.62        # Length-aware STT posterior word confidence floor
+
+# Viterbi Dynamic Programming Stitcher & Crossfade
+crossfade_ms = 3.5                # Phase-aligned equal-power Hann crossfade window (ms)
+micro_gap_ms = 12.0               # Optional natural inter-word breathing pause
+semantic_similarity_cutoff = 0.64 # Tier 4 semantic/phonetic substitution cutoff
+enable_subword_splicing = true    # Tier 3 sub-word prefix/suffix syllable splicing
+use_starter_pack_fallback = true  # Tier 5 articulated CMU Arctic real-speech starter pack
+
+# Voice Mode & Real-Time DSP FX Rack
+voice_mode = "natural"            # Options: "natural", "low_pitch", "high_pitch", "victim_lock", "chaos", "random"
+fx_mode = "clean"                 # Options: "clean", "retro_8bit", "radio", "scratch", "corrupt"
+low_pitch_cutoff_hz = 135.0
+high_pitch_cutoff_hz = 145.0
+locked_victim_id = ""
+
+# Audio Routing & Loopback Protection
+self_monitor_enabled = true       # Hear stitched voice in your own headphones while injecting to virtual mic
+auto_kill_rogue_loopbacks = true  # Automatically unload rogue PulseAudio/PipeWire `module-loopback` modules
+half_duplex_cooldown_ms = 120.0   # Post-playback mute guard cooldown to prevent self-ingestion
+
+# Pluggable STT & Embedding Backends
+stt_backend = "auto"              # Options: "auto", "pocketsphinx", "vosk", "faster_whisper"
+active_stt_model_id = "pocketsphinx-en-us"
+active_embedding_model_id = "cmu-arpabet-hybrid"
+active_tokenizer_id = "cmu-arpabet-g2p"

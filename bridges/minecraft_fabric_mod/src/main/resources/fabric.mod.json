@@ -1,0 +1,20 @@
+{
+  "schemaVersion": 1,
+  "id": "voxsplice_bridge",
+  "version": "2.4.0",
+  "name": "VoxSplice Voice Chat Bridge",
+  "description": "Intercepts .m chat messages on the client and triggers VoxSplice over localhost UDP for Simple Voice Chat.",
+  "authors": ["VoxSplice Contributors"],
+  "license": "MIT",
+  "environment": "client",
+  "entrypoints": {
+    "client": [
+      "com.voxsplice.fabric.VoxSpliceClientMod"
+    ]
+  },
+  "depends": {
+    "fabricloader": ">=0.15.0",
+    "fabric-api": "*",
+    "minecraft": ">=1.20"
+  }
+}
