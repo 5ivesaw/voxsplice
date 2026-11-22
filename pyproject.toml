@@ -7,7 +7,7 @@ name = "voxsplice"
 version = "2.4.0"
 description = "Lightweight real-time concatenative voice reconstruction & coarticulation-aware audio splicer for Linux (PipeWire/PulseAudio) and Windows (WASAPI/VB-Cable)"
 readme = "README.md"
-license = { text = "MIT" }
+license = { text = "GPL-3.0-or-later" }
 requires-python = ">=3.10"
 authors = [
   { name = "VoxSplice Engineering" }
